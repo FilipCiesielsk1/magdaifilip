@@ -1,0 +1,320 @@
+html {
+    scroll-behavior: smooth;
+  }
+/* Ogólne style strony */
+body {
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    background-color: #fff; 
+    color: #333;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0;
+}
+
+/* Styl nagłówka */
+header {
+    background: transparent;
+    margin: 30px 0 1px 0;
+    padding: 2rem 0 0.3rem 0;
+}
+
+
+/* Styl dla nagłówków */
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: xx-large;
+    color: #555;
+    margin-bottom: 1rem;
+}
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.4rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+
+
+
+.scroll-to-top {
+    position: fixed;
+    outline: none;
+    background: transparent;
+    bottom: 1%;
+    right: 0%;
+    opacity: 0; /* Początkowo ukryta */
+    cursor: pointer;
+    scale: 0.5;
+    /* transition-duration: 0.2s; */
+    border-radius: 50%;
+    transition-duration: 0.4s;
+    pointer-events: none;
+}
+.scroll-to-top img{
+    height: 120px;
+    rotate: -45deg;
+}
+    
+.scroll-to-top.visible {
+    opacity: 1; /* Widoczna */
+    pointer-events: auto;
+}
+
+.scroll-to-top:hover {
+    opacity: 0.2;
+    transform: scale(1.2);
+}
+
+
+
+
+
+/* Sekcja Hero */
+#hero {
+    background-image: url('pics/GreyMap.jpg');
+    background-size:cover;
+    background-position:center;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+}
+
+
+#hero-text {
+    font-family: 'Goudy Old Style', serif;
+    font-size: 2rem;
+    color: #333;
+    border: 1px solid #aaa;
+    margin: 30px 0 10px 0;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.516);
+    text-align: center;
+}
+
+
+/* Nawigacja */
+/* #main-navigation {
+    line-height: 0;
+} */
+#main-navigation ul {
+    list-style-type:none;
+    line-height: 1;
+    padding: 0;
+    margin: 50px 0 0 0 ;
+    display:grid;
+    gap: 10px;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+#main-navigation ul li {
+    display: inline-block;
+    line-height: 1;
+    background: rgba(0, 0, 0, 0.051);
+    border-radius: 20%;
+    padding: 10px;
+}
+
+
+#main-navigation ul li a {
+    letter-spacing: 1.3px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+#main-navigation ul li a:hover {
+    color: #8fa69e; /* Pastelowy zielony */
+}
+
+#navigation-image {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#navigation-image img {
+    height: 34px;
+    width: auto;
+    display: inline-block;
+}
+
+/* Styl dla timera odliczającego */
+#countdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Georgia', serif;
+    color: #1a1a1a;
+}
+
+.countdown-title {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.countdown-title::before,
+.countdown-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: #ddd;
+}
+.countdown-title::before {
+    left: -120px; /* Odsuń lewą kreskę od tytułu */
+}
+.countdown-title::after {
+    right: -120px; /* Odsuń prawą kreskę od tytułu */
+}
+
+.countdown-timer {
+    font-size: 2.5rem;
+    color: #798a82; /* Pastelowy zielony */
+    font-family: 'Castellar', serif;
+}
+
+/* --------------------------------------------NASZA HISTORIA--------------------------------------------------------- */
+#story{
+    margin: 10px 0 0 0;
+}
+.story-details-l,
+.story-details-r  {
+    display: flex;
+    flex-direction: column;
+    padding: 0 3% 50px;
+}
+
+.story-details-text-l {
+    flex: 1;
+    order: 1;
+    width: 100%;
+    text-align: justify;
+    font-size: 1.3rem;
+    padding: 0 1% 20px 0;
+}
+.story-details-photo-l {
+    flex: 1;
+    order: 2;
+    text-align: center;
+    width: 100%;
+    padding: 0 1%;
+}
+.story-details-text-r {
+    flex: 1;
+    order: 1;
+    width: 100%;
+    text-align: justify;
+    font-size: 1.3rem;
+    padding: 0 1% 20px 0;
+}
+.story-details-photo-r {
+    flex: 1;
+    order: 2;
+    text-align: center;
+    width: 100%;
+    padding: 0 1%;
+}
+.story-details-photo-r img,
+.story-details-photo-l img,
+.story-details-photo-l video{
+    width:inherit;
+    height: auto;
+}
+
+
+/* --------------------------------------------ŚLUB I WESELE--------------------------------------------------------- */
+#wedding-det {
+    display: flex;
+    flex-direction: column; /* Układ poziomy dla szczegółów i mapy */
+    align-items: flex-start;
+    padding: 1% 1% 80px 1%;
+    margin: 1%;
+    text-align: left;
+}
+
+.wedding-details {
+    flex: 1;
+    padding: 2% 5% 5%;
+    width: inherit;
+}
+
+.details {
+    display: flex;
+    flex-direction: column; /* Ustawienie szczegółów w kolumnie */
+    gap: 1.5rem; /* Odstęp między szczegółami */
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1.2rem; /* Odstęp między ikoną a tekstem */
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease-in-out;
+}
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.wedding-map {
+    text-align: right;
+    width: 100%;
+    height: 300px;
+}
+
+.wedding-map iframe {
+    width: 100%;
+    height:  100%;
+    border-radius: 8px;
+}
+
+/* --------------------------------------------PLAN WESELA--------------------------------------------------------- */
+#wedding-plan-det {
+    font-size: 1.3rem;
+    margin-bottom: 80px;
+}
+
+/* --------------------------------------------MENU--------------------------------------------------------- */
+#menu-det {
+    font-size: 1.6rem;
+    margin-bottom: 80px;
+}
+.icon-dish {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease-in-out;
+}
+.icon-dish:hover {
+    transform: scale(1.1);
+}
+
+/* --------------------------------------------ORGANIZACJA--------------------------------------------------------- */
+
+#organization-det {
+    font-size: 1.3rem;
+    margin-bottom: 80px;
+}
+
+/* --------------------------------------------ZDJĘCIA--------------------------------------------------------- */
+
+#photo-det {
+    font-size: 1.3rem;
+}

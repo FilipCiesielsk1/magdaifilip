@@ -1,0 +1,310 @@
+html {
+    scroll-behavior: smooth;
+  }
+/* Ogólne style strony */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; 
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 10px;
+}
+
+/* Styl nagłówka */
+header {
+    background: transparent;
+    margin: 70px 0 70px 0;
+    padding: 2rem 0;
+}
+
+/* Styl dla nagłówków */
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: xx-large;
+    color: #555;
+    margin-bottom: 1rem;
+}
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+
+
+
+.scroll-to-top {
+    position: fixed;
+    outline: none;
+    background: transparent;
+    bottom: -3%;
+    right: -1%;
+    opacity: 0; /* Początkowo ukryta */
+    cursor: pointer;
+    scale: 0.5;
+    /* transition-duration: 0.2s; */
+    border-radius: 50%;
+    transition-duration: 0.4s;
+    pointer-events: none;
+}
+.scroll-to-top img{
+    height: 180px;
+    rotate: -45deg;
+}
+    
+.scroll-to-top.visible {
+    opacity: 1; /* Widoczna */
+    pointer-events: auto;
+}
+
+.scroll-to-top:hover {
+    opacity: 0.2;
+    transform: scale(1.2);
+}
+
+
+
+
+
+/* Sekcja Hero */
+#hero {
+    background-image: url('pics/GreyMap.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+}
+
+
+#hero-text {
+    font-family: 'Goudy Old Style', serif;
+    font-size: 5rem;
+    color: #333;
+    border: 1px solid #aaa;
+    margin: 30px 0 100px 0;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.516);
+    text-align: center;
+}
+
+
+/* Nawigacja */
+#main-navigation ul {
+    list-style: none;
+    padding: 1rem 0;
+    margin: 70px 0 0 0;
+    display: inline-flex;
+    gap: 110px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+#main-navigation ul li {
+    display: inline;
+    position: relative;
+}
+
+
+#main-navigation ul li a {
+    text-decoration: none;
+    color: #5d5d5d;
+    transition: color 0.3s ease;
+}
+
+#main-navigation ul li a:hover {
+    color: #9eb2ab; /* Pastelowy zielony */
+}
+
+#navigation-image {
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+#navigation-image img {
+    width: 500px;
+    height: auto;
+    display: inline-block;
+}
+
+/* Styl dla timera odliczającego */
+#countdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Georgia', serif;
+    color: #1a1a1a;
+}
+
+.countdown-title {
+    font-size: 2rem;
+    font-weight: normal;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.countdown-title::before,
+.countdown-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.countdown-title::before {
+    left: -120px; /* Odsuń lewą kreskę od tytułu */
+}
+
+.countdown-title::after {
+    right: -120px; /* Odsuń prawą kreskę od tytułu */
+}
+
+.countdown-timer {
+    font-size: 3rem;
+    color: #798a82; /* Pastelowy zielony */
+    font-family: 'Castellar', serif;
+}
+
+/* --------------------------------------------NASZA HISTORIA--------------------------------------------------------- */
+#story{
+    margin: 120px 120px 0 120px ;
+}
+.story-details-l,
+.story-details-r  {
+    display: flex;
+    flex-direction: row;
+    padding: 0 17% 110px;
+}
+
+.story-details-text-l {
+    flex: 1;
+    order: 1;
+    width: 50%;
+    text-align: justify;
+    font-size: 1.6rem;
+    padding: 0 1%;
+}
+.story-details-photo-l {
+    flex: 1;
+    order: 1;
+    text-align: center;
+    width: 50%;
+    padding: 0 1%;
+}
+.story-details-text-r {
+    flex: 1;
+    order: 2;
+    width: 50%;
+    text-align: justify;
+    font-size: 1.6rem;
+    padding: 0 1%;
+}
+.story-details-photo-r {
+    flex: 1;
+    order: 2;
+    text-align: center;
+    width: 50%;
+    padding: 0 1%;
+}
+.story-details-photo-r img,
+.story-details-photo-l img{
+    height: 600px;
+}
+.story-details-photo-l video{
+    max-height: 800px;
+}
+
+/* --------------------------------------------ŚLUB I WESELE--------------------------------------------------------- */
+#wedding-det {
+    display: flex;
+    flex-direction: row; /* Układ poziomy dla szczegółów i mapy */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 40px 100px 120px;
+    text-align: left;
+}
+
+.wedding-details {
+    flex: 1;
+    padding: 90px 0 0 120px;
+    width: 50%;
+}
+
+.details {
+    display: flex;
+    flex-direction: column; /* Ustawienie szczegółów w kolumnie */
+    gap: 3rem; /* Odstęp między szczegółami */
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Odstęp między ikoną a tekstem */
+    font-size: 1.6rem;
+    color: #555;
+}
+
+.icon {
+    width: 62px;
+    height: 62px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease-in-out;
+}
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.wedding-map {
+    text-align: right;
+    width: 50%;
+}
+
+.wedding-map iframe {
+    width: 90%;
+    height:  500px;
+    border-radius: 8px;
+}
+
+/* --------------------------------------------PLAN WESELA--------------------------------------------------------- */
+#wedding-plan-det {
+    font-size: 1.6rem;
+}
+
+/* --------------------------------------------MENU--------------------------------------------------------- */
+#menu-det {
+    font-size: 1.6rem;
+}
+.icon-dish {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease-in-out;
+}
+.icon-dish:hover {
+    transform: scale(1.1);
+}
+
+/* --------------------------------------------ORGANIZACJA--------------------------------------------------------- */
+
+#organization-det {
+    font-size: 1.6rem;
+}
+
+/* --------------------------------------------ZDJĘCIA--------------------------------------------------------- */
+
+#photo-det {
+    font-size: 1.6rem;
+}
