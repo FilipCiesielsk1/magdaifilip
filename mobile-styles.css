@@ -42,7 +42,7 @@ h2 {
     outline: none;
     background: transparent;
     bottom: 1%;
-    right: 0%;
+    right: 2%;
     opacity: 0; /* Początkowo ukryta */
     cursor: pointer;
     scale: 0.5;
