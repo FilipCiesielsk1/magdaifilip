@@ -166,15 +166,15 @@ h2 {
     content: '';
     position: absolute;
     top: 50%;
-    width: 100px;
+    width: 60px;
     height: 1px;
     background-color: #ddd;
 }
 .countdown-title::before {
-    left: -120px; /* Odsuń lewą kreskę od tytułu */
+    left: -60px; /* Odsuń lewą kreskę od tytułu */
 }
 .countdown-title::after {
-    right: -120px; /* Odsuń prawą kreskę od tytułu */
+    right: -60px; /* Odsuń prawą kreskę od tytułu */
 }
 
 .countdown-timer {
